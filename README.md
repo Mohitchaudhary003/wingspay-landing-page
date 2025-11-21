@@ -3,9 +3,6 @@ Landing Page for Wing AI assignment# WingPay – Modern Payment Landing Page
 
 WingPay is a clean and modern landing page concept for a future payment product by Wings AI.  
 The design follows a blue tech theme and takes inspiration from Razorpay’s layout, while keeping the UI completely original.
-<img width="958" height="473" alt="Screenshot 2025-11-21 161139" src="https://github.com/user-attachments/assets/9a3abb67-34e5-424d-abe8-653810645e0a" />
-<img width="960" height="411" alt="Screenshot 2025-11-21 161155" src="https://github.com/user-attachments/assets/03430fab-d933-4f45-99c5-e5ec1b7ca0fc" />
-<img width="958" height="473" alt="Screenshot 2025-11-21 161139" src="https://github.com/user-attachments/assets/88a1d656-6c23-4f97-bc03-94317c027820" />
 
 ---
 
@@ -39,6 +36,8 @@ https://mohitchaudhary003.github.io/wingspay-landing-page/
 ---
 
 ## 📸 Screenshot
+<img width="958" height="473" alt="Screenshot 2025-11-21 161139" src="https://github.com/user-attachments/assets/9a3abb67-34e5-424d-abe8-653810645e0a" />
+<img width="960" height="411" alt="Screenshot 2025-11-21 161155" src="https://github.com/user-attachments/assets/03430fab-d933-4f45-99c5-e5ec1b7ca0fc" />
 
 
 ---

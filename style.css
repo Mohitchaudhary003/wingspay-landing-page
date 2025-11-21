@@ -1,0 +1,244 @@
+/* ---------- GLOBAL STYLES ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f6f9fc;
+    color: #1a1a1a;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    height: 70px;
+    padding: 0 50px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #0055ff;
+}
+
+.logo span {
+    color: #002a80;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+.login-btn,
+.signup-btn {
+    padding: 8px 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.login-btn {
+    background: transparent;
+    color: #0055ff;
+    border: 2px solid #0055ff;
+}
+
+.signup-btn {
+    background: #0055ff;
+    color: white;
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 60px;
+}
+
+.hero-content {
+    width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #002a80;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.cta-btn {
+    margin-top: 25px;
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    background: #0055ff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.hero-image img {
+    width: 480px;
+    border-radius: 10px;
+}
+
+/* ---------- FEATURES SECTION ---------- */
+.features {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    width: 300px;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-size: 22px;
+    color: #0055ff;
+    margin-bottom: 10px;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    background: #002a80;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin-top: 60px;
+}
+
+/* Smooth animation everywhere */
+* {
+    transition: 0.3s ease;
+}
+
+/* Button Hover */
+.signup-btn:hover,
+.cta-btn:hover {
+    background: #003fcc;
+}
+
+/* Navbar shadow on scroll */
+.navbar.scrolled {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0, 85, 255, 0.2);
+}
+
+.hero-content {
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Tablets (max width: 992px) */
+@media (max-width: 992px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 350px;
+        margin-top: 30px;
+    }
+
+    .feature-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+/* Mobiles (max width: 768px) */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        display: none;  /* Mobile par links hide */
+    }
+
+    .login-btn {
+        display: none;  /* Optional: hide login on small screens */
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .features h2 {
+        font-size: 28px;
+    }
+
+    .card {
+        width: 90%;
+    }
+}

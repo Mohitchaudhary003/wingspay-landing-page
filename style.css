@@ -1,71 +1,50 @@
-/* ---------- GLOBAL STYLES ---------- */
+/* ---------- GLOBAL ---------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: "Segoe UI", sans-serif;
+    transition: 0.3s ease;
 }
 
 body {
-    background: #f6f9fc;
+    background: #ebf0fa; /* light but not too white */
     color: #1a1a1a;
 }
 
-/* ---------- NAVBAR ---------- */
-.navbar {
+/* ---------- HEADER ---------- */
+.header {
     height: 70px;
-    padding: 0 50px;
-    background: white;
+    background: #ffffff;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    align-items: center;
+    padding: 0 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .logo {
     font-size: 30px;
-    font-weight: 700;
-    color: #0055ff;
-}
-
-.logo span {
+    font-weight: 800;
     color: #002a80;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links li a {
+.nav a {
+    margin-left: 28px;
     text-decoration: none;
     font-size: 16px;
-    color: #333;
     font-weight: 500;
+    color: #333;
 }
 
-.login-btn,
-.signup-btn {
-    padding: 8px 18px;
-    border: none;
-    cursor: pointer;
-    border-radius: 6px;
-    font-size: 15px;
+.nav a:hover {
+    color: #002a80;
 }
 
-.login-btn {
-    background: transparent;
-    color: #0055ff;
-    border: 2px solid #0055ff;
-}
-
-.signup-btn {
-    background: #0055ff;
-    color: white;
-}
-
-/* ---------- HERO SECTION ---------- */
+/* ---------- HERO ---------- */
 .hero {
     display: flex;
     align-items: center;
@@ -73,24 +52,26 @@ body {
     padding: 80px 60px;
 }
 
-.hero-content {
+.hero-text {
     width: 50%;
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
 }
 
-.hero-content h1 {
-    font-size: 48px;
+.hero-text h1 {
+    font-size: 50px;
     font-weight: 800;
     color: #002a80;
     line-height: 1.2;
 }
 
-.hero-content p {
+.hero-text p {
     margin-top: 15px;
     font-size: 18px;
     color: #333;
 }
 
-.cta-btn {
+.primary-btn {
     margin-top: 25px;
     padding: 12px 30px;
     font-size: 18px;
@@ -101,144 +82,159 @@ body {
     cursor: pointer;
 }
 
-.hero-image img {
-    width: 480px;
-    border-radius: 10px;
+.primary-btn:hover {
+    background: #003fcc;
 }
 
-/* ---------- FEATURES SECTION ---------- */
+.hero-img img {
+    width: 480px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* ---------- FEATURES ---------- */
 .features {
     padding: 80px 60px;
     text-align: center;
 }
 
 .features h2 {
-    font-size: 35px;
-    font-weight: 700;
+    font-size: 36px;
+    font-weight: 800;
+    color: #002a80;
     margin-bottom: 40px;
 }
 
-.feature-cards {
+.feature-grid {
     display: flex;
     justify-content: center;
     gap: 30px;
 }
 
-.card {
+.feature-card {
     width: 300px;
+    background: #ffffff;
     padding: 25px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    transition: 0.3s;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0,42,128,0.18);
 }
 
-.card h3 {
+.feature-card h3 {
     font-size: 22px;
     color: #0055ff;
     margin-bottom: 10px;
 }
 
+/* ---------- SECURITY ---------- */
+.security {
+    padding: 80px 60px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.security h2 {
+    color: #002a80;
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.security p {
+    width: 70%;
+    margin: auto;
+    font-size: 18px;
+    color: #444;
+}
+
+/* ---------- PRICING ---------- */
+.pricing {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.pricing h2 {
+    color: #002a80;
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.pricing-card {
+    width: 350px;
+    margin: auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.pricing-card h3 {
+    color: #0055ff;
+    font-size: 24px;
+}
+
+.pricing-card strong {
+    display: block;
+    margin: 15px 0;
+    font-size: 22px;
+    color: #222;
+}
+
+/* ---------- CONTACT ---------- */
+.contact {
+    padding: 80px 60px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #002a80;
+}
+
+.contact p {
+    font-size: 18px;
+    color: #444;
+    margin-top: 10px;
+}
+
 /* ---------- FOOTER ---------- */
 .footer {
     background: #002a80;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
     color: white;
     margin-top: 60px;
+    font-size: 15px;
 }
 
-/* Smooth animation everywhere */
-* {
-    transition: 0.3s ease;
-}
-
-/* Button Hover */
-.signup-btn:hover,
-.cta-btn:hover {
-    background: #003fcc;
-}
-
-/* Navbar shadow on scroll */
-.navbar.scrolled {
-    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 18px rgba(0, 85, 255, 0.2);
-}
-
-.hero-content {
-    animation: fadeIn 1s ease forwards;
-    opacity: 0;
-}
-
+/* ---------- Animations ---------- */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(25px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-
-
-/* ---------- RESPONSIVE DESIGN ---------- */
-
-/* Tablets (max width: 992px) */
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 992px) {
-
     .hero {
         flex-direction: column;
         text-align: center;
     }
-
-    .hero-content {
-        width: 100%;
-    }
-
-    .hero-image img {
-        width: 350px;
-        margin-top: 30px;
-    }
-
-    .feature-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
+    .hero-text { width: 100%; }
+    .hero-img img { width: 350px; margin-top: 30px; }
+    .feature-grid { flex-direction: column; }
 }
 
-/* Mobiles (max width: 768px) */
 @media (max-width: 768px) {
-
-    .navbar {
-        padding: 0 20px;
-    }
-
-    .nav-links {
-        display: none;  /* Mobile par links hide */
-    }
-
-    .login-btn {
-        display: none;  /* Optional: hide login on small screens */
-    }
-
-    .hero-content h1 {
-        font-size: 36px;
-    }
-
-    .hero-content p {
-        font-size: 16px;
-    }
-
-    .features h2 {
-        font-size: 28px;
-    }
-
-    .card {
-        width: 90%;
-    }
+    .header { padding: 0 20px; }
+    .nav { display: none; }
+    .hero-text h1 { font-size: 38px; }
+    .primary-btn { font-size: 16px; }
+    .feature-card { width: 90%; }
 }
